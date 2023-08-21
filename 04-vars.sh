@@ -10,6 +10,8 @@ echo ${a}
 
 echo ${b}
 
-echo $(date + %F)
+Dte=$(date +%F)
+
+echo "$Dte"
 
 echo value of e is ${e}
