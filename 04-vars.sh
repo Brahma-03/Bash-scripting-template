@@ -3,7 +3,7 @@ a=10
 
 b=abc
 
-LOGGEDIN-USERS=$(who | wc -l)
+LOGG=$(who | wc -l)
 
 #a is  10 is integer
 
@@ -17,5 +17,5 @@ Dte=$(date +%F)
 echo $Dte
 
 
-echo Number of logged in users are $LOGGEDIN-USERS
+echo Number of logged in users are $LOGGS
 echo value of e is ${e}
