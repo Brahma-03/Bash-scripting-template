@@ -17,5 +17,5 @@ Dte=$(date +%F)
 echo $Dte
 
 
-echo Number of logged in users are $LOGGS
+echo Number of logged in users are $LOGG
 echo value of e is ${e}
