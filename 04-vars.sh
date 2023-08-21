@@ -1,7 +1,7 @@
 a=10
 
 
-b = abc
+b=abc
 
 #a is  10 is integer
 
