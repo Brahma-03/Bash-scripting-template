@@ -12,6 +12,6 @@ echo ${b}
 
 Dte=$(date +%F)
 
-echo "$Dte"
+echo $Dte
 
 echo value of e is ${e}
