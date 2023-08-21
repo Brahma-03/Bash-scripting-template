@@ -8,7 +8,7 @@ b=abc
 echo value of a is : $a
 echo ${a}
 
-echo "${b}"
+echo ${b}
 
 echo $(date + %F)
 
