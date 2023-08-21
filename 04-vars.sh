@@ -7,4 +7,9 @@ b=abc
 
 echo value of a is : $a
 echo ${a}
+
 echo "${b}"
+
+echo $(date + %F)
+
+echo value of e is ${e}
