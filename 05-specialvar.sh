@@ -26,3 +26,12 @@ echo value of c is : $c
 echo value of d is : $d
 
 # sh scriptname.sh 100 200 300 
+
+
+echo "Printing the variables thaat we have passed in the script $*"
+
+echo "Printing the variables that we have passed in the script $@"
+echo "printing the number variables that we have passed in the script $#"
+
+eecho "printing the PID of the script that wwe are running $$"
+
