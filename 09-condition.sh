@@ -8,5 +8,4 @@ echo "stopping XYZ Seervices"
 restart)
 echo "Restarting XYZ Services"
 
-esacc
-
+esac
