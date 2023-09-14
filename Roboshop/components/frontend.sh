@@ -2,6 +2,8 @@
 
 set -e 
 
+source components/common.sh
+
 echo -n "Instslling Nginx :"
 yum install nginx -y   >> /tmp/frontend.log
 systemctl enable nginx
@@ -23,6 +25,5 @@ rm -rf frontend-main README.md
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 
 systemctl restart nginx
-
-echo "completed SETUP"
-stat$?
+echo -n "completed SETUP"
+stat $?
