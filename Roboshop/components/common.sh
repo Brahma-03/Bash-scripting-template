@@ -1,4 +1,5 @@
 #!/bin/bash
+#Vlidating wheather the executing user is root or not
 
 ID=$(id -u)
 if [$ID -ne 0]; then 
