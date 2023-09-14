@@ -9,7 +9,7 @@ systemctl enable nginx
 echo -n "Starting nginx:"
 systemctl start nginx
 
-if [$1 -eq 0 ] ; 
+if [ $? -eq 0 ] ; 
 then
     echo -e "\e[32m Success \e[0m"
     else
@@ -19,7 +19,7 @@ then
 echo -n "Downloading tthe code"
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
 
-if [$1 -eq 0 ] ; 
+if [ $? -eq 0 ] ; 
 then
     echo -e "\e[32m Success \e[0m"
     else
@@ -37,7 +37,7 @@ mv localhost.conf /etc/nginx/default.d/roboshop.conf
 systemctl restart nginx
 echo -n "completed SETUP"
 
-if [$1 -eq 0 ] ; 
+if [ $? -eq 0 ] ; 
 then
     echo -e "\e[32m Success \e[0m"
     else
