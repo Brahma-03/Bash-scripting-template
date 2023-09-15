@@ -63,7 +63,7 @@ then
     echo -e "\e[31m failure. Look for the logs \e[0m"
     fi
 
-    mongo < catalogue.js && mongo < users.js
+    mongo < catalogue.js  >> /tmp/${comp}.log    && mongo < users.js  >> /tmp/${comp}.log
 if [ $? -eq 0 ] ; 
      then
     echo -e "\e[32m Success \e[0m"
