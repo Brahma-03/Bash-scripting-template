@@ -3,7 +3,7 @@
 
 comp=mongodb
 
-s
+
 
 echo -n "Configuring the mongoDB"
 curl -s -o /etc/yum.repos.d/${comp}.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo
@@ -19,7 +19,7 @@ then
   yum install -y mongodb-org  >> /tmp/${comp}.log
 
   echo  -n "Updating the $component config"
-  sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongo
+  sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
   
   if [ $? -eq 0 ] ; 
   then
@@ -42,4 +42,4 @@ then
     echo -e "\e[31m failure. Look for the logs \e[0m"
     fi
 
-    
+
