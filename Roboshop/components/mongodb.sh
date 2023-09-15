@@ -11,9 +11,9 @@ curl -s -o /etc/yum.repos.d/${comp}.repo https://raw.githubusercontent.com/stans
 
 if [ $? -eq 0 ] ; 
 then
-    echo -n "\e[32m Success \e[0m"
+    echo -e "\e[32m Success \e[0m"
     else
-    echo -n "\e[31m failure. Look for the logs \e[0m"
+    echo -e "\e[31m failure. Look for the logs \e[0m"
     fi
 
   yum install -y mongodb-org
