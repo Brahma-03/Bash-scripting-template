@@ -42,4 +42,32 @@ then
     echo -e "\e[31m failure. Look for the logs \e[0m"
     fi
 
+  echo -n "Downloading the Schema"
 
+  curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip"
+
+  if [ $? -eq 0 ] ; 
+  then
+    echo -e "\e[32m Success \e[0m"
+    else
+    echo -e "\e[31m failure. Look for the logs \e[0m"
+    fi
+
+    echo -n "Extracting the component"
+
+    cd /tmp  && unzip mongodb.zip  && cd mongodb-main
+    if [ $? -eq 0 ] ; 
+     then
+    echo -e "\e[32m Success \e[0m"
+    else
+    echo -e "\e[31m failure. Look for the logs \e[0m"
+    fi
+
+    mongo < catalogue.js && mongo < users.js
+if [ $? -eq 0 ] ; 
+     then
+    echo -e "\e[32m Success \e[0m"
+    else
+    echo -e "\e[31m failure. Look for the logs \e[0m"
+    fi
+  
