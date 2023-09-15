@@ -1,12 +1,12 @@
 #!/bin/bash
 
 
-#Mongodb-Component
+comp=mongodb
 
-set -e
+s
 
 echo -n "Configuring the mongoDB"
-curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo
+curl -s -o /etc/yum.repos.d/${comp}.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo
 
 
 if [ $? -eq 0 ] ; 
