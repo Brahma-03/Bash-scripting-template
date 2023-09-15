@@ -71,3 +71,6 @@ if [ $? -eq 0 ] ;
     echo -e "\e[31m failure. Look for the logs \e[0m"
     fi
   
+
+
+  echo -n "\n \n|************________________$comp configaration is completed__________*******"
