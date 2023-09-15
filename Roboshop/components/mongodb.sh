@@ -55,7 +55,7 @@ then
 
     echo -n "Extracting the component"
 
-    cd /tmp  && unzip mongodb.zip  && cd mongodb-main
+    cd /tmp  && unzip mongodb.zip  >> /tmp/${comp}.log  && cd mongodb-main
     if [ $? -eq 0 ] ; 
      then
     echo -e "\e[32m Success \e[0m"
