@@ -16,12 +16,30 @@ then
     echo -e "\e[31m failure. Look for the logs \e[0m"
     fi
 
-  yum install -y mongodb-org
+  yum install -y mongodb-org  >> /tmp/${comp}.log
 
-  echo  -n "Updating thee $component config"
-#   sed -i -e 's/
+  echo  -n "Updating the $component config"
+  sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongo
   
+  if [ $? -eq 0 ] ; 
+  then
+    echo -e "\e[32m Success \e[0m"
+    else
+    echo -e "\e[31m failure. Look for the logs \e[0m"
+    fi
 
-#   systemctl enable mongod
+  echo -n "start the component service"
+
+  systemctl enable mongod  >> /tmp/${comp}.log
   
-#   systemctl start mongod
+  systemctl start mongod
+
+
+  if [ $? -eq 0 ] ; 
+  then
+    echo -e "\e[32m Success \e[0m"
+    else
+    echo -e "\e[31m failure. Look for the logs \e[0m"
+    fi
+
+    
