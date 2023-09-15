@@ -1,7 +1,27 @@
 #!/bin/bash
 
-ID=$(id -u)
-if [$ID -ne 0]; then 
-   echo -e "\e[31m Try executing the script with sudo or a root user \e[0m"
-   exit 1
-fi 
+
+#Mongodb-Component
+
+set -e
+
+echo -n "Configuring the mongoDB"
+curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans-robot-project/mongodb/main/mongo.repo
+
+
+if [ $? -eq 0 ] ; 
+then
+    echo -e "\e[32m Success \e[0m"
+    else
+    echo -e "\e[31m failure. Look for the logs \e[0m"
+    fi
+
+  yum install -y mongodb-org
+
+  echo "Updating thee $component config"
+#   sed -i -e 's/
+  
+
+#   systemctl enable mongod
+  
+#   systemctl start mongod
