@@ -2,7 +2,7 @@ frontend:
 	bash components/frontend.sh
 mongodb:
 	bash components/mongodb.sh
-caatalouge:
+catalouge:
 	bash components/catalouge.sh
 
 
