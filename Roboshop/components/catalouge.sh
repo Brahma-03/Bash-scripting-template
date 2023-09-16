@@ -6,7 +6,7 @@ comp=catalouge
 
 echo  -n "Location Setup"
 
-curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_16.x | bash >>  /tmp/${comp}.log 
 
 if [ $? -eq 0 ] ; 
 then
