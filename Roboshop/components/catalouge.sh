@@ -36,8 +36,7 @@ then
 
 
 echo -n  "adding thee user"
- useradd roboshop 
- # || useradd roboshop
+ id component || useradd roboshop
 
  if [ $? -eq 0 ] ; 
  then
